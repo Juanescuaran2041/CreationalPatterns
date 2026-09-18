@@ -25,6 +25,10 @@ public class Catalog {
         return instance;
     }
 
+    public Map<String, Component> getComponents(){
+        return new HashMap<>(components);
+    }
+
     public void registerComponent(int avaliableUnits, Component component){
         components.put(component.getId(), component);
         stockById.put(component.getId(), avaliableUnits);

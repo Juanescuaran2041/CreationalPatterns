@@ -4,9 +4,9 @@ package factories;
 import components.*;
 
 /**
- * Familia Office: socket LGA1700 — DISTINTO al AM5 de GamerFactory. Un
- * Processor de aquí nunca debe terminar emparejado con un Motherboard de
- * la otra fábrica; eso es justamente lo que tu validación de R2 impediría.
+ * Office family: socket LGA1700 — DIFFERENT from GamerFactory's AM5. A
+ * Processor from here must never end up paired with a Motherboard from
+ * the other factory; that is exactly what your R2 validation should prevent.
  */
 public class OfficeFactory implements ComponentFactory {
 
@@ -22,7 +22,7 @@ public class OfficeFactory implements ComponentFactory {
 
     @Override
     public Processor createProcessor() {
-        return new Processor("CPU-OFF-01", 620_000, 65, "LGA1700");
+        return new Processor("CPU-OFF-01", 65, 620_000, "LGA1700");
     }
 
     @Override

@@ -16,7 +16,7 @@ public class GamerFactory implements ComponentFactory {
 
     @Override
     public Processor createProcessor() {
-        return new Processor("CPU-GAMER-01", 1_450_000, 105, "AM5");
+        return new Processor("CPU-GAMER-01", 105, 1_450_000, "AM5");
     }
 
     @Override
