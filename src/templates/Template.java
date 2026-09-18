@@ -15,6 +15,14 @@ public class Template implements Prototype<Template> {
         this.config = config;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public Configuration getConfig() {
+        return config;
+    }
+
     @Override
     public Template clone() {
         Map<String, Component> clonedComponets = new LinkedHashMap<>(this.config.getComponentsByType());

@@ -43,9 +43,9 @@ public class DemoPatterns {
         Configuration configuracionGamer = new ConfigurationBuilder("GAMER", gamerFactory)
                 .addProcessor()
                 .addMotherboard()
-                .addPowerSupply()
+                .addCase()
                 .build();
-        System.out.println("Configuracion construida (" + configuracionGamer.getLinea() + "): "
+        System.out.println("Configuracion construida (" + configuracionGamer.getProductLine() + "): "
                 + configuracionGamer.getComponentsByType().keySet());
         System.out.println("Consumo acumulado (parcial, faltan pasos por implementar): "
                 + configuracionGamer.getComponentsByType() + "W");
@@ -56,7 +56,7 @@ public class DemoPatterns {
         Template copiaParaCliente = plantillaStreamer.clone();
         System.out.println("¿La copia es el mismo objeto Plantilla? " + (plantillaStreamer == copiaParaCliente));
         System.out.println("¿Comparten el mismo objeto Configuracion? "
-                + (plantillaStreamer.getConfiguracion() == copiaParaCliente.getConfiguracion()));
+                + (plantillaStreamer.getConfig() == copiaParaCliente.getConfig()));
         System.out.println("(Deben ser objetos distintos: por eso modificar la copia mas adelante");
         System.out.println(" no puede afectar la plantilla \"Streamer\" original, R5.)");
 
